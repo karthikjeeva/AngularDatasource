@@ -1,0 +1,9 @@
+<ul *ngIf="(beginnerCourses$ | async) as list; else loading">
+  <li *ngFor="let listItem of list">
+     {{ listItem.description }}
+  </li>
+</ul>
+
+<ng-template #loading>
+ <p>Shows when no data, waiting for Api</p>
+</ng-template>
