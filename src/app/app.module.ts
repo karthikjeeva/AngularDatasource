@@ -9,7 +9,9 @@ import { CoursesService } from './datasource/datasource.service';
 import { HttpClientModule } from "@angular/common/http";
 import { MatTabsModule } from '@angular/material/tabs';
 /* import { CoursecardComponent } from './coursecard/coursecard.component';*/
-import { DataComponent } from './data/data.component'; 
+import { DataComponent } from './data/data.component';
+import { ServersidefiltercoursesComponent } from './serversidefiltercourses/serversidefiltercourses.component';
+import { HomeComponent } from './home/home.component'; 
 
 
 
@@ -25,7 +27,9 @@ import { DataComponent } from './data/data.component';
   ],
   declarations: [
     AppComponent,
-    DataComponent
+    DataComponent,
+    ServersidefiltercoursesComponent,
+    HomeComponent
     
   ],
   providers:[CoursesService],

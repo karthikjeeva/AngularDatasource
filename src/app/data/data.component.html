@@ -1,9 +1,13 @@
-<ul *ngIf="(beginnerCourses$ | async) as list; else loading">
-  <li *ngFor="let listItem of list">
-     {{ listItem.description }}
-  </li>
-</ul>
-
-<ng-template #loading>
- <p>Shows when no data, waiting for Api</p>
-</ng-template>
+<div *ngIf="fetchData"> 
+  <ul *ngIf="(beginnerCourses$ | async) as list; else loading">
+    <li *ngFor="let listItem of list">
+       {{ listItem.description }}
+    </li>
+  </ul>
+  
+  <ng-template #loading>
+   <p>Shows when no data, waiting for Api</p>
+  </ng-template>
+  <br/><br/> 
+  <button (click)="checkObservable()">Check Observable</button>
+</div> 
